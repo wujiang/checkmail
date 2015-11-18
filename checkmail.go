@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 )
 
@@ -25,10 +26,15 @@ func main() {
 
 	mailboxes := cfg.Mailboxes
 	output := []string{}
-	for name, path := range mailboxes {
+	names := []string{}
+	for k := range mailboxes {
+		names = append(names, k)
+	}
+	sort.Strings(names)
+	for _, name := range names {
 		md := MailDir{
 			name: name,
-			path: path,
+			path: mailboxes[name],
 		}
 		unseen, err := md.Unseen()
 		if err != nil {
