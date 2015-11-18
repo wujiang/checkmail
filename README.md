@@ -1,6 +1,6 @@
 ## checkmail
 
-Output number of unread emails for Maildir format inboxes.
+Output numbers of unread emails for Maildir format inboxes.
 
 ### Usage
 
