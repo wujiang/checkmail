@@ -1,0 +1,6 @@
+{
+    "mailboxes": {
+        "Mail1": "/home/foo/mail/mail1",
+        "Mail2": "/home/foo/mail/mail2"
+    }
+}
